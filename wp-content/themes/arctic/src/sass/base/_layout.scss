@@ -1,0 +1,12 @@
+.section-title {
+    position: relative;
+    padding: 10px 0 10px 35px; 
+
+    &::before {
+        content: '';
+        @extend %pos;
+        right: auto;
+        width: 10px;
+        background: $primary;
+    }
+}

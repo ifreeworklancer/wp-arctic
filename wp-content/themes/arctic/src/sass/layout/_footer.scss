@@ -1,0 +1,60 @@
+#app-footer {
+    padding-top: 240px;
+    background: url('../images/bg/footer-bg.jpg') 50% 50% / cover no-repeat;
+    overflow: hidden;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        margin-top: -200px;
+    }
+
+    &.app-footer--secondary {
+        @extend %pos;
+        padding-top: 0;
+        top: auto;
+        background: transparent;
+    }
+}
+
+.footer-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-list {
+
+    &-item {
+        margin-bottom: 10px;
+
+        a {
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+}
+
+.footer-copyr {
+    position: relative;
+    padding: 20px 0;
+
+    &__item {
+        color: #e0e0e0;
+        font-size: 14px;
+
+        a {
+            color: #fff;
+            font-weight: normal;
+        }
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        left: -1000vw;
+        bottom: auto;
+        right: -100vw;
+        height: 1px;
+        background: rgba(#54cbc1, .3);
+    }
+}

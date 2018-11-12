@@ -1,0 +1,129 @@
+#intro {
+    height: 100vh;
+    max-height: 1080px;
+    background: url('../images/bg/intro-bg.jpg') 50% 50% / cover no-repeat;
+    overflow: hidden;
+    z-index: 4;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        height: auto;
+        padding: 150px 0 180px;
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        background: rgba(#000, .5);
+        z-index: -1;
+    }
+}
+
+.intro-item {
+    position: relative;
+    z-index: 5;
+
+    &-description {
+
+        .intro-button {
+            position: relative;
+            top: 10px;
+            flex: 1 0 auto;
+            margin-right: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #fff;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                top: 0;
+                margin-top: 20px;
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+
+        &__text {
+            flex: 1 0 auto;
+            width: 100%;
+            max-width: 280px;
+            color: #fff;
+
+            h2 {
+                font-family: 'HelveticaNeueCyr', sans-serif;
+                font-size: 40px;
+                font-weight: bold;
+
+                @media (max-width: map_get($grid-breakpoints, sm)) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+
+    &__title {
+        padding-right: 59px;
+
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding-right: 0;
+        }
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: block;
+
+    &__text {
+        position: absolute;
+        top: 30px;
+        left: -60px;
+        width: 80px;
+        font-size: 14px;
+        color: #fff;
+        transform: rotate(-90deg);
+    }
+
+    &__icon {
+        position: relative;
+        width: 2px;
+        height: 130px;
+        background: rgba(#fff, .15);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 30px;
+            background: #fff;
+            box-shadow: 0px 2px 35px 8px rgba(255, 255, 255, 0.2);
+            animation: scrollDown 1.5s linear forwards infinite;
+        }
+
+        @keyframes scrollDown {
+            0% {
+                top: 0;
+            }
+
+            25% {
+                top: 25%;
+            }
+
+            50% {
+                top: 50%;
+            }
+
+            75% {
+                top: 75%;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+    }
+}

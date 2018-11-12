@@ -1,0 +1,123 @@
+#stock {
+    overflow: hidden;
+}
+
+.stock-tabs-img {
+    position: relative;
+    height: 100%;
+    left: -23vw;
+    min-width: 45vw;
+    overflow: hidden;
+    z-index: 5;
+
+    @media (max-width: map_get($grid-breakpoints, lg)) {
+        display: none;
+    }
+
+    @media (max-width: 1400px) {
+        left: -10vw;
+    }
+
+    .logo {
+        position: absolute;
+        right: 35px;
+        bottom: 35px;
+        z-index: 6;
+    }
+
+    &__item {
+        @extend %pos;
+        @extend %img;
+        transform: translateX(-1000px);
+        transition: .5s;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+}
+
+.stock-tabs-sm-img {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 250px;
+    width: 100%;
+    overflow: hidden;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+        display: none;
+    }
+
+    &__item {
+        @extend %pos;
+        @extend %img;
+        transform: translateX(-800px);
+        transition: .5s;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+}
+
+.stock-tabs {
+
+    &-item {
+        position: relative;
+        padding: 45px 0 105px;
+        z-index: 4;
+        cursor: pointer;
+
+        &.active {
+
+            .stock-tabs-item__text {
+                opacity: 1;
+            }
+
+            .btn-container {
+
+                .btn {
+                    bottom: 50px;
+                }
+            }
+
+            &::before {
+                right: -1000px;
+            }
+        }
+
+        .btn-container {
+            @extend %pos;
+            overflow: hidden;
+
+            .btn {
+                position: absolute;
+                left: 0;
+                bottom: -150px;
+                transition: .5s;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #132a38;
+        }
+
+        &__text {
+            margin: 20px 0;
+            opacity: .5;
+            transition: .5s;
+        }
+
+        &::before {
+            content: '';
+            @extend %pos;
+            left: -2000px;
+            right: 180%;
+            background: #edf8ff;
+            z-index: -5;
+            transition: .8s;
+        }
+    }
+}

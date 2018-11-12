@@ -1,0 +1,40 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+
+h1 {
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 1.5rem;
+    }
+}
+
+
+h3 {
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 1rem;
+    }
+}
+
+a {
+    transition: 0.35s;
+}
+
+ul {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}

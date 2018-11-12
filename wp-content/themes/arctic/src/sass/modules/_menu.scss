@@ -1,0 +1,107 @@
+.menu {
+
+    @media (max-width: map_get($grid-breakpoints, lg)) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($secondary, .8);
+        display: none;
+    }
+
+    &-content {
+
+        @media (max-width: map_get($grid-breakpoints, lg)) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    &-list {
+
+        &-item {
+
+            a {
+                position: relative;
+                display: block;
+                padding-bottom: 25px;
+                font-size: 16px;
+                font-weight: normal;
+                color: #fff;
+                text-transform: uppercase;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    bottom: -18px;
+                    height: 5px;
+                    background: #fff;
+                    transition: .5s;
+                }
+
+                
+                @media (max-width: map_get($grid-breakpoints, lg)) {
+                    margin-bottom: 20px;
+                    padding-bottom: 15px;
+                    font-size: 20px;
+
+                    &::before {
+                        bottom: 0;
+                    }
+                }
+
+                &:hover {
+                    color: #fff;
+
+                    &::before {
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.burger-menu {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+
+    &.active {
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            &--top {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &--middle {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &--bottom {
+                width: 0;
+            }
+        }
+    }
+
+    .line {
+        margin-bottom: 5px;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        transition: .5s;
+    }
+}
