@@ -1,9 +1,9 @@
 <!-- Stock -->
 <section id="stock">
     <?php $stock = get_post(47); ?>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center justify-content-xl-between">
-            <div class="col-lg-5">
+            <div class="col-lg-6 p-0">
                 <div class="stock-tabs-img">
                     <?php 
                         $stock_images_fields = get_field('stock__images', $stock->ID);

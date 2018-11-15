@@ -20,8 +20,10 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6">
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-lg-6 order-2 p-lg-0">
                 <div class="services-tabs-img">
                     <?php 
                         $services_images_fields = get_field('services__images', $services->ID);
@@ -36,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 mx-auto col-lg-6">
+            <div class="col-sm-8 mx-auto col-lg-4 order-1">
                 <div class="services-tabs">
                     <div class="services-tabs-header">
                         <ul class="services-tabs-header-list list-unstyled">

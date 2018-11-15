@@ -3,11 +3,13 @@
     <?php $about = get_post(36); ?>
     <div class="container">
         <div class="row justify-content-between">
+            <div class="col-12">
+                <h2 class="section-title">
+                    <?= $about->post_title ?>
+                </h2>
+            </div>
             <div class="col-sm-6 col-lg-5 order-2 order-sm-1">
                 <div class="about-item">
-                    <h2 class="section-title mb-4">
-                    <?= $about->post_title ?>
-                    </h2>
                     <?php 
                         $about_text_fields = get_field('about__text', $about->ID);
                         $about_desciption_fields = get_field('about__description', $about->ID);

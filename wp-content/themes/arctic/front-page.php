@@ -3,8 +3,8 @@
 	$templates = [
 		'intro',
 		'services',
-		'about',
 		'stock',
+		'about',
 		'order',
 	];
 	foreach ($templates as $template) {
