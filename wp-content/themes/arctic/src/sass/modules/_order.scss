@@ -11,6 +11,8 @@
     align-items: center;
     z-index: 50;
     transition: .5s;
+    max-height: 100%;
+    overflow-y: auto;
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
         left: 50%;
@@ -34,6 +36,7 @@
         opacity: .4;
         cursor: pointer;
         transition: .5s;
+        z-index: 60;
 
         &__text {
             color: #fff;
