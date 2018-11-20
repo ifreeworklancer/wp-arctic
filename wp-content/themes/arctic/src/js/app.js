@@ -166,7 +166,7 @@ require('bootstrap');
     if ($(this).scrollTop() > $('.about-description').offset().top - 600) {
       $('.about-description').addClass('active');
     }
-    $('.order').removeClass('active');
+    // $('.order').removeClass('active');
   })
 
   var phones = $('[type="tel"]');
