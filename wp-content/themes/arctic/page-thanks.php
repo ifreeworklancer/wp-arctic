@@ -14,7 +14,7 @@
                         Спасибо!
                     </h1>
                     <div class="thanks-page-item__text">
-                        Мы уже выехали к Вам 
+                        Ваш заказ принят.
                     </div>
                     <a href="<?php echo site_url(); ?>" class="btn btn-primary">
                         На главную
