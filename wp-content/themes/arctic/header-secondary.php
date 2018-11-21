@@ -66,7 +66,7 @@
                                     </a>
                                 </li>
                                 <li class="menu-list-item">
-                                    <a href="<?php echo site_url() . '#app-footer'?>">
+                                    <a href="<?php echo site_url() . '#contacts'?>">
                                         контакты
                                     </a>
                                 </li>

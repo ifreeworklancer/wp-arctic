@@ -66,7 +66,7 @@
                                     </a>
                                 </li>
                                 <li class="menu-list-item">
-                                    <a href="#app-footer" class="scroll-link">
+                                    <a href="#contacts" class="scroll-link">
                                         контакты
                                     </a>
                                 </li>

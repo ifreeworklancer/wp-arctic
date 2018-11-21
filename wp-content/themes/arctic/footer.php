@@ -1,7 +1,7 @@
 </main>
 
 <footer id="app-footer">
-    <div class="container">
+    <div class="container" id="contacts">
         <div class="row justify-content-between pb-3">
             <div class="col-sm-3 col-lg-2 mb-4 mb-sm-0">
                 <a href="<?php echo site_url(); ?>" class="logo">
