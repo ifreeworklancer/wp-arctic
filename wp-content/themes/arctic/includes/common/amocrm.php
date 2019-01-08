@@ -22,12 +22,14 @@ try {
 
 	$api->request(new Request(Request::SET, $lead));
 
+	$lead = $api->last_insert_id;
+
 	$contact = new Contact();
 	$contact
 		/* Имя */
 		->setName($data['user-name'])
 		->setResponsibleUserId($api->config['ResponsibleUserId'])
-		->setLinkedLeadsId($api->last_insert_id)
+		->setLinkedLeadsId($lead)
 		->setCustomField(
 			$api->config['ContactFieldPhone'],
 			$data['phone'],
