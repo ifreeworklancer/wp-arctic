@@ -31,6 +31,8 @@ try {
 		->setLinkedLeadsId($lead)
 		->setCustomField($api->config['ContactFieldPhone'], phone_filter($data['phone']), 'MOB');
 
+	var_dump($contact); die();
+
 	$api->request(new Request(Request::GET, ['query' => phone_filter($data['phone'])], ['contacts', 'list']));
 
 	$contact_exists = ($api->result) ? $api->result->contacts[0] : false;
