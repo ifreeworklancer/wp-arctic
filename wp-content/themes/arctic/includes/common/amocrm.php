@@ -8,7 +8,7 @@ use AmoCRM\Request;
 require_once (__DIR__ . '/../../vendor/autoload.php');
 
 try {
-	$api = new Handler('domain', 'user@example.com');
+	$api = new Handler('arktikazp', 'dimplex.nic@gmail.com');
 
 	$lead = new Lead();
 	$lead
