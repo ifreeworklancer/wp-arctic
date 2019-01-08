@@ -81,6 +81,6 @@ function amoCrmSync($contact_form)
 {
 	if ($submission = WPCF7_Submission::get_instance()) {
 		$data = $submission->get_posted_data();
-		require_once 'includes/common/amocrm.php';
+		require_once(__DIR__ . '/includes/common/amocrm.php');
 	}
 }

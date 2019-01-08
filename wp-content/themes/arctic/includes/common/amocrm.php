@@ -5,7 +5,7 @@ use AmoCRM\Handler;
 use AmoCRM\Lead;
 use AmoCRM\Request;
 
-require_once '../../vendor/autoload.php';
+require_once (__DIR__ . '/../../vendor/autoload.php');
 
 try {
 	$api = new Handler('domain', 'user@example.com');
