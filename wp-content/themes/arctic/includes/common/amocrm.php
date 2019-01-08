@@ -12,6 +12,7 @@ try {
 		'name' => $data['user-name'],
 		'phone' => $data['phone']
 	];
+
 	$api = new Handler('arktikazp', 'dimplex.nic@gmail.com');
 
 	$lead = new Lead();
