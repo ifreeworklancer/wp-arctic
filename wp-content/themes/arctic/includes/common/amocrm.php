@@ -17,7 +17,7 @@ try {
 		->setStatusId($api->config['LeadStatusId'])
 		->setCustomField($api->config['BottlesFieldId'], $data['value'])
 		->setCustomField($api->config['CommentFieldId'], $data['message'])
-		->setCustomField($api->config['AddressFieldId'], $data['message'])
+		->setCustomField($api->config['AddressFieldId'], $data['place'])
 		->setTags([$data['user-name'], $data['phone']]);
 
 	$api->request(new Request(Request::SET, $lead));
@@ -26,15 +26,10 @@ try {
 
 	$contact = new Contact();
 	$contact
-		/* Имя */
 		->setName($data['user-name'])
 		->setResponsibleUserId($api->config['ResponsibleUserId'])
 		->setLinkedLeadsId($lead)
-		->setCustomField(
-			$api->config['ContactFieldPhone'],
-			$data['phone'],
-			'MOB'
-		);
+		->setCustomField($api->config['ContactFieldPhone'], $data['phone'], 'MOB');
 
 	$api->request(new Request(Request::GET, ['query' => $data['phone']], ['contacts', 'list']));
 
