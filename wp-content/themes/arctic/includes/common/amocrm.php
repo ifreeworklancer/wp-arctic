@@ -50,4 +50,3 @@ try {
 	$api->request(new Request(Request::SET, $contact));
 } catch (\Exception $e) {
 }
-
